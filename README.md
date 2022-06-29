@@ -1,1 +1,3 @@
-A map project for a client in Uptowork. https://i.imgur.com/iHrTIp4.png
+A German map project for a client in Uptowork.
+
+Live version is published here : https://adambedoui.github.io/Germany-Map/
