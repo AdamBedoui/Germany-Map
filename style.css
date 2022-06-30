@@ -98,8 +98,9 @@
   }
 
   .main-container .map-container {
-    min-width: 60vh;
+    width: -webkit-fill-available;
     margin: 0 auto;
+    height: 100%;
   }
 
   .main-container .map-container svg {
