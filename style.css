@@ -1,37 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap");
 
-* {
+.main-container * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body {
+.main-container {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 90%;
+  gap: 60px;
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   font-size: 12px;
 }
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 90%;
-  gap: 60px;
-}
 
-.map-container svg {
+.main-container .map-container svg {
   width: 100%;
   height: 100vh;
 }
-.map-container svg:hover {
+
+.main-container .map-container svg:hover {
   cursor: pointer;
 }
 
-.gentlemen-card {
+.main-container .gentlemen-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,19 +38,19 @@ body {
   opacity: 0;
   transition: visibility 0.4s linear, opacity 0.4s linear;
 }
-.gentlemen-card:hover {
+.main-container .gentlemen-card:hover {
   cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
-  .gentlemen-card:nth-child(2) {
+  .main-container .gentlemen-card:nth-child(2) {
     transform: translateX(50px);
   }
-  .gentlemen-card:nth-child(4) {
+  .main-container .gentlemen-card:nth-child(4) {
     transform: translateX(-50px);
   }
 }
-.gentlemen-info {
+.main-container .gentlemen-info {
   background-color: #9bc31c;
   padding: 10px 20px 10px 60px;
   border-radius: 10px;
@@ -62,7 +58,7 @@ body {
   -webkit-box-shadow: 6px 7px 34px 3px rgba(0, 0, 0, 0.54);
   -moz-box-shadow: 6px 7px 34px 3px rgba(0, 0, 0, 0.54);
 }
-.gentlemen-image {
+.main-container .gentlemen-image {
   z-index: 2;
   position: absolute;
   right: 0;
@@ -70,53 +66,53 @@ body {
   transform: translate(-180%, -50%);
 }
 
-.gentlemen-image img {
+.main-container .gentlemen-image img {
   max-width: 110px;
   filter: drop-shadow(6px 9px 10px rgba(0, 0, 0, 0.46));
 }
 
-.bold {
+.main-container .bold {
   font-weight: 700;
 }
 
-.name {
+.main-container .name {
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.profession {
+.main-container .profession {
   font-style: italic;
   text-transform: uppercase;
 }
 
-.visible {
+.main-container .visible {
   visibility: visible;
   opacity: 1;
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    align-items: flex-start;
-  }
-  .container {
+  .main-container {
     flex-direction: column;
     gap: 60px;
+    margin: 0 auto;
   }
 
-  .map-container {
+  .main-container .map-container {
     min-width: 60vh;
+    margin: 0 auto;
   }
 
-  .map-container svg {
+  .main-container .map-container svg {
     width: 100%;
     height: 100%;
   }
 
-  .gentlemen-container {
+  .main-container .gentlemen-container {
     position: relative;
+    width: 100%;
   }
 
-  .gentlemen-card {
+  .main-container .gentlemen-card {
     position: absolute;
     margin: 0;
     top: 50%;
@@ -124,15 +120,16 @@ body {
     transform: translate(-40%, -50%);
   }
 
-  .gentlemen-info {
-    width: 230px;
+  .main-container .gentlemen-info {
+    min-width: 230px;
   }
 
-  .gentlemen-image {
+  .main-container .gentlemen-image {
     z-index: 2;
     position: absolute;
-    right: 0;
+    left: -25%;
+    right: auto;
     top: 50%;
-    transform: translate(-180%, -50%);
+    transform: translate(0, -50%);
   }
 }
